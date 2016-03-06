@@ -2,6 +2,7 @@ request = require 'request'
 cheerio = require 'cheerio'
 
 robot.respond /look up manga "(*)"/i, (res) ->
+	robot.send "Ready to go!"
 	lookup = res.match[1]
 	exploded = lookup.split(' ')
 	manga = exploded.join([separator='-'])

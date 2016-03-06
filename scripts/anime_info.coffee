@@ -12,9 +12,9 @@ get_summary = (manga_name) ->
 		if not error
 			$ = cheerio.load body
 			summary = $("[itemprop='description']").text()
-			robot.send summary
+			res.send summary
 		else
-			robot.send error
+			res.send error
 
 format_manga_name = (name) ->
 	exploded = name.split(' ')

@@ -18,7 +18,7 @@ module.exports = (robot) ->
     res.send res.random tomboy  
 
   robot.respond /look up (.*)/i, (res) ->
-    robot.send "Ready to look up "+res.match[1]  
+    res.send "Ready to look up "+res.match[1]  
 
   robot.respond /open the (.*) doors/i, (res) ->
     doorType = res.match[1]

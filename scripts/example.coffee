@@ -15,10 +15,7 @@ module.exports = (robot) ->
 
   tomboy = ['Who\'s tomboy?', 'I\'m scared...', 'The flashbacks... OH NO THE FLASHBACKS']
   robot.hear /tomboy/i, (res) ->
-    res.send res.random tomboy  
-
-  robot.respond /look up (.*)/i, (res) ->
-    res.send "Ready to look up "+res.match[1]  
+    res.send res.random tomboy   
 
   robot.respond /open the (.*) doors/i, (res) ->
     doorType = res.match[1]

@@ -10,9 +10,15 @@
 
 module.exports = (robot) ->
 
+  robot.respond /please introduce yourself/i, (res) ->
+    res.send "こんにちは！ You may call me Roboto-chan ٩(◕‿◕)۶ I'm the kawaii assistant robot of this group and I can do a bunch of stuff. If there's something in particular you'd like me to do, please contact Zephirot93"
+
   robot.hear /badger/i, (res) ->
     res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
-    
+
+  robot.hear /tomboy/i, (res) ->
+    res.send "Who's tomboy?"  
+
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
   #   if doorType is "pod bay"

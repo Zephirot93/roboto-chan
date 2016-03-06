@@ -1,3 +1,6 @@
+robot.respond /look up (*)/i, (res) ->
+	robot.send "Ready to look up "+res.match[1]
+
 request = require 'request'
 cheerio = require 'cheerio'
 

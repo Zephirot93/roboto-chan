@@ -12,6 +12,6 @@ module.exports = (robot) ->
 			if not error
 				$ = cheerio.load body
 				summary = $("[itemprop='description']").text()
-				res.send summary
+				res.send '>'+summary
 			else
 				res.send error

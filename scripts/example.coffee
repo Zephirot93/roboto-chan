@@ -25,7 +25,7 @@ module.exports = (robot) ->
       res.reply "Opening #{doorType} doors"
 
   robot.hear /I like pie/i, (res) ->
-    res.send "/me makes a freshly baked pie"
+    res.send "_me makes a freshly baked pie_"
 
   robot.respond /are you alive?/i, (res) ->
     res.send 'Yes!'

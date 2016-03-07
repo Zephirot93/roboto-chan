@@ -5,8 +5,9 @@ utf8 = require 'utf8'
 module.exports = (robot) ->
 	robot.respond /define (.+)/i, (res) ->
 		res.send 'Just a moment please ...'
-		pre_url = 'http://jisho.org/search/'+res.match[1]
-		url = utf8.encode(pre_url)
+		search = utf8.encode(res.match[1])
+		pre_url = utf8.encode('http://jisho.org/search/')
+		url = pre_url + search
 		request url, (error, response, body) ->
 			results = []
 			$ = cheerio.load body

@@ -23,4 +23,4 @@ module.exports = (robot) ->
 						msg += result.word + ' [' + result.furigana + ']' + ': ' + result.meaning + '\n'
 				res.send(msg.trim())	
 			else
-				res.send 'I\'m sorry but I coudln\'t find anything ... ｡･ﾟﾟ*(>д<)*ﾟﾟ･｡'
+				res.send 'I\'m sorry but I couldn\'t find anything ... ｡･ﾟﾟ*(>д<)*ﾟﾟ･｡'  

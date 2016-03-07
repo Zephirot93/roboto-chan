@@ -4,7 +4,6 @@ utf8 = require 'utf8'
 
 module.exports = (robot) ->
 	robot.respond /define (.+)/i, (res) ->
-		res.send 'Just a moment please ...'
 		url = 'http://jisho.org/search/' + res.match[1]
 		request url, (error, response, body) ->
 			results = []

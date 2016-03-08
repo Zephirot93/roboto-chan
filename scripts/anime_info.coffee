@@ -26,10 +26,10 @@ module.exports = (robot) ->
 						recommendations.push(title)
 
 					# Send message
-					res.send '>'+summary
+					#res.send '>'+summary
+					res.send url
 					res.send '*Tags:* '+tags.join(', ')
 					res.send '*You might also like:* '+recommendations.join(', ')
-					res.send url
 				else
 					res.send 'I\'m sorry but I couldn\'t find anything ... ｡･ﾟﾟ*(>д<)*ﾟﾟ･｡' 
 			else
